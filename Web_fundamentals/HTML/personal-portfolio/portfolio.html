@@ -1,21 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-</head>
-<style>
-    body{
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
-    }
+    <style>
+        body {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+        }
 
-</style>
+        .container {
+            margin: 10px;
+        }
+
+        .profilepic {
+            width: 150px;
+            height: 150px;
+
+        }
+
+        .socialicon {
+            width: 40px;
+            height: 40px;
+        }
+
+        .socialsbar {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .socialsmini {
+            display: flex;
+            gap: 5px;
+        }
+
+        .sociallabel {
+            align-self: center;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        td,
+        th {
+            padding: 2px;
+            padding-right: 20px;
+        }
+
+        td:not(:first-child),
+        th:not(:first-child) {
+            border-left: 2px black solid;
+        }
+
+        tr:not(:last-child) {
+
+            td,
+            th {
+                border-bottom: solid black 2px;
+            }
+        }
+
+        form {
+
+            input {
+                margin: 5px;
+                border: 3px solid black;
+                border-radius: 3px;
+            }
+
+            #message {
+                min-width: 375px;
+                min-height: 40px;
+            }
+
+            .button{
+                padding: 5px;
+                border: 2px solid black;
+                background-color: white;
+                border-bottom: 3px solid black;
+                border-right: 4px solid black;
+                
+            }
+
+
+
+            .button:hover{
+                    background-color: lightgray;
+                }
+
+        }
+    </style>
+</head>
+
 <body>
 
     <div class="container">
-        <h1>Programmer Name</h1>
+        <h1>Ahmad Abdellatif</h1>
+        <img class="profilepic"
+            src="data:image/png;base64,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">
+        <div class="socialsbar">
+            <div class="socialsmini">
+                <img class="socialicon" src="https://cdn-icons-png.flaticon.com/256/25/25231.png">
+                <a class="sociallabel" href="https://github.com/ahmadlatif1">my Github</a>
+            </div>
+            <div class="socialsmini">
+                <img class="socialicon" src="https://cdn-icons-png.flaticon.com/512/61/61109.png">
+                <a class="sociallabel" href="https://www.linkedin.com/in/ahmad-abdellatif-b22484290/">my Linkedin</a>
+            </div>
+            <div class="socialsmini">
+                <img class="socialicon" src="https://cdn-icons-png.flaticon.com/512/666/666162.png">
+                <a class="sociallabel" href="ahmadabdellatef1@gmail.com">my Email</a>
+            </div>
+        </div>
+        <h2>technologies</h2>
+        <table>
+            <tr>
+                <th>Front-End</th>
+                <th>Javascript</th>
+                <th>languages</th>
+                <th>Database</th>
+                <th>Concepts</th>
+            </tr>
+            <tr>
+                <td>HTML5</td>
+                <td>Angular</td>
+                <td>Java</td>
+                <td>MongoDB</td>
+                <td>OOP</td>
+            </tr>
+            <tr>
+                <td>CSS3</td>
+                <td>React</td>
+                <td>Golang</td>
+                <td>mySQL</td>
+                <td>REST</td>
+            </tr>
+            <tr>
+                <td>Bootstrap</td>
+                <td>Express</td>
+                <td>Bash</td>
+                <td>Postman</td>
+                <td>AJAX</td>
+            </tr>
+        </table>
+
+        <h2>Axsos projects</h2>
+        linked in my <a href="https://github.com/ahmadlatif1/Axsos">Github</a> page
+
+        <h2>Contact me</h2>
+        <form>
+            <label for="Name">Name</label>
+            <input type="text" id="Name">
+
+            <label for="Email">Email: *</label>
+            <input type="email" id="Email"><br>
+
+            <label for="message">Message:</label>
+            <input type="text" id="message">
+
+            <br>
+            <input class="button" type="submit" value="Send Message"><br>
+
+        </form>
+
+
+
     </div>
-    
+
 </body>
+
 </html>
