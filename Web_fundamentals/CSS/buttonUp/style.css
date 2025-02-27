@@ -1,0 +1,46 @@
+body {
+    font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.container{
+    margin: 100px;
+}
+button{
+    margin-bottom: 10px;
+}
+.search{
+
+    border: 2px #2ba6a7 solid;
+    width: 120px;
+    padding: 5px;
+    border-radius: 20px;
+    color: #2ba6a7;
+    font-weight: 600;
+    background-color: whitesmoke;
+}
+.plus{
+    color: white;
+    background-color: rgb(119, 224, 189);
+    border:none;
+    border-radius: 20px;
+    width: 35px;
+    height: 35px;
+    font-weight: 600;
+    font-size:larger;
+    text-align: center;
+    padding:4px;
+    padding-top: 1px;
+    padding-right: 5px;
+}
+.create{
+
+    background-color: #2b78e4;
+    color: white;
+    width: 170px;
+    padding: 5px;
+    font-size:medium;
+    
+    border: 3px solid black;
+    box-shadow: 5px 5px black;
+
+}
