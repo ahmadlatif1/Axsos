@@ -1,0 +1,28 @@
+body{
+
+}
+.row{
+    margin-top: 10px;
+    
+    display: flex;
+    align-content: flex-start;
+    flex-flow: row nowrap;
+    gap: 10px;
+    * {
+        background-color: cadetblue;
+        height: 50px;
+        flex-grow: 1;
+    }
+    .col-1-3{
+        flex-grow: 1;
+    }
+    .col-2-3{
+        flex-grow: 2;
+    }
+    .col-2-5{
+        flex-grow: 2;
+    }
+    .col-3-5{
+        flex-grow: 3;
+    }
+}
