@@ -1,0 +1,32 @@
+body{
+    font-family: 'Courier New', Courier, monospace;
+    padding: 20px;
+}
+.container{
+    background-color: rgb(227, 237, 240);
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+
+}
+.catcontainer{
+    display: flex;
+    justify-content: space-evenly;
+    width: 800px;
+    padding: 20px;
+}
+#one{
+    background-color:white;
+}
+#two{
+    background-color: #94c7ff;
+}
+#three{
+    background-color:khaki;
+}
+.octocat{
+    height: 200px;
+    width: 200px;
+}
