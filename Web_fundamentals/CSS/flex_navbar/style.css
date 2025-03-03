@@ -1,0 +1,47 @@
+body {
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+.nav {
+    background-color: #333333;
+    display: flex;
+    flex-flow: row;
+
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
+    justify-content: space-between;
+}
+
+.nav-links {
+    display: flex;
+    flex-flow: row;
+    list-style-type: none;
+    align-items: center;
+    gap: 20px;
+
+    a {
+        font-weight: bold;
+        color: white;
+        text-decoration: none;
+    }
+}
+
+.nav-links>li:nth-child(odd) {
+    a {
+        color: lightgray;
+    }
+
+}
+
+.btn {
+
+    background-color: #18a2b8;
+    color: white;
+    padding: 5px 10px;
+    font-size: medium;
+    font-weight: 600;
+
+    border: 3px solid black;
+    box-shadow: 5px 5px black;
+}
