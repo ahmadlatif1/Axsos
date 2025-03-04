@@ -18,12 +18,14 @@ body{
     padding: 20px;
 }
 #one{
+    justify-content: space-between;
     background-color:white;
 }
 #two{
     background-color: #94c7ff;
 }
 #three{
+    justify-content: space-between;
     background-color:khaki;
 }
 .octocat{
