@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <script src="main.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="container">
+        <header>
+            <h1>Dojonary</h1>
+            <input class="searchbar" type="text" placeholder="Search">
+            <input class="loginbutton" type="button" value="login" onclick="login(this)">
+        </header>
+
+        <div class="pagecontainer">
+
+            <div class="defcontainer">
+                <div class="ninjacontainer">
+                    <div class="wordbox">
+                        <div class="word">ninja</div>
+                        <div class="wordtype">noun</div>
+                        <div class="plural">Plural: ninjas</div>
+                        <input type="button" value="13 likes" class="likesbox" onclick="like(this)"></input> 
+                    </div>
+                    <div class="defbox">
+                        <span>A practitioner skilled in the <a href="">Japanese</a> art of <a href="">nunjutsu</a></span>
+                    </div>
+                </div>
+                <div class="ninjacontainer">
+                    <div class="wordbox">
+                        <div class="word">ninja</div>
+                        <div class="wordtype">noun</div>
+                        <div class="plural">Plural: ninjas</div>
+                        <input type="button" value="37 likes" class="likesbox" onclick="like(this)"></input> 
+                    </div>
+                    <div class="defbox">
+                        <span>A <a href="">programmer</a> who breaks down problems with <a href="">zen</a>-like focus</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidecontainer">
+                <div class="adddefinitionbox">
+                    <span>Dojonary is defined by <b>YOU</b></span>
+                    <input type="button" value="Add Definition" onclick="definition(this)">
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</body>
+</html>
