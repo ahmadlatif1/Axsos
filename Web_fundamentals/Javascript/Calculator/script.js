@@ -44,7 +44,7 @@ function setOp(op) {
 
 
 function calculate() {
-
+    var toshow
     switch (operator) {
         case '/': displaynum(Number((nums[0] / nums[1]).toFixed(6)));
             break;
@@ -62,6 +62,10 @@ function calculate() {
 function clr() {
     nums = [0]
     displaynum(0)
+    isdecimal = false
+    afterOperator = false
+    operator = "+"
+
 }
 
 function displaynum(input) {
