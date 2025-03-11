@@ -49,6 +49,9 @@ body{
         &.operator{
             background-color: #ff8c00;
         }
+        &:hover{
+            cursor: pointer;
+        }
     }
     #equals{
         width: 100%;
