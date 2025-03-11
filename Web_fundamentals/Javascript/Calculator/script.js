@@ -50,9 +50,9 @@ function calculate() {
             break;
         case '*': displaynum(Number((nums[0] * nums[1]).toFixed(6)));
             break;
-        case '-': displaynum(nums[0] - nums[1]);
+        case '-': displaynum(Number((nums[0] - nums[1]).toFixed(6)));
             break;
-        case '+': displaynum(nums[0] + nums[1]);
+        case '+': displaynum(Number((nums[0] + nums[1]).toFixed(6)));
             break;
     }
 
