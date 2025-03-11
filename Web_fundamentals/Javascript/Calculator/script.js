@@ -21,6 +21,7 @@ function press(num) {
             displaynum(nums[nums.length - 1])
 
         } else {
+            
             nums.push(num)
             afterOperator = false
 
@@ -32,6 +33,10 @@ function press(num) {
 
 function setOp(op) {
 
+    if(nums.length==2){
+        calculate()
+    }
+    nums[0]=currentnum
     operator = op;
     afterOperator = true;
     displaynum(nums[0] + op)
@@ -41,7 +46,7 @@ function setOp(op) {
 function calculate() {
 
     switch (operator) {
-        case '/': displaynum((nums[0] / nums[1]).toFixed(6));
+        case '/': displaynum(Number((nums[0] / nums[1]).toFixed(6)));
             break;
         case '*': displaynum(nums[0] * nums[1]);
             break;
