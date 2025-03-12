@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+    <title>Dojo Weather</title>
+</head>
+<body>
+    <header>
+        <h1>DojoWeather</h1>
+        <ol>
+            <li>Burbank</li>
+            <li>Chicago</li>
+            <li>Dallas</li>
+        </ol>
+    </header>
+    <div class="container">
+        <div class="weatherheader">
+            <h2>San Jose</h2>
+            <div class="tempcontainer">
+                <label for="temperature">Show Temperature in: </label>
+                <select name="temperature" id="temp" onchange="changeTemp(this)">
+                    <option selected="selected" value="c">°C</option>
+                    <option value="f">°F</option>
+                </select>
+            </div>
+        </div>
+        <div class="weathercontainer">
+            <div class="weathercard">
+                <span class="day">Today</span>
+                <img src="some_rain.png">
+                <span class="weatherdesc">some rain</span>
+                <div class="temps">
+                    <span class="numcontainer a"><span class="tempNum">24</span>°</span>
+                    <span class="numcontainer b"><span class="tempNum">18</span>°</span>
+                </div>
+            </div>
+            <div class="weathercard">
+                <span class="day">Tomorrow</span>
+                <img src="some_sun.png">
+                <span class="weatherdesc">some rain</span>
+                <div class="temps">
+                    <span class="numcontainer a"><span class="tempNum">27</span>°</span>
+                    <span class="numcontainer b"><span class="tempNum">19</span>°</span>
+                </div>
+            </div>
+            <div class="weathercard">
+                <span class="day">Friday</span>
+                <img src="some_clouds.png">
+                <span class="weatherdesc">some rain</span>
+                <div class="temps">
+                    <span class="numcontainer a"><span class="tempNum">21</span>°</span>
+                    <span class="numcontainer b"><span class="tempNum">16</span>°</span>
+                </div>
+            </div>
+            <div class="weathercard">
+                <span class="day">Saturday</span>
+                <img src="some_sun.png">
+                <span class="weatherdesc">some rain</span>
+                <div class="temps">
+                    <span class="numcontainer a"><span class="tempNum">26</span>°</span>
+                    <span class="numcontainer b"><span class="tempNum">21</span>°</span>
+                </div>
+            </div>
+        </div>
+        <div class="cookiemenu" id="cookie">
+            <img src="cookie.png">
+            <div class="cookiedesc">
+                <h2>Stop! cookie time</h2>
+                <span>We use cookies (sadly not the edible ones) to personalize content and ads,
+                     to provide social media features and to analyse our traffic <a href="">Read more...</a></span>
+            </div>
+            <button class="cookiebtn" onclick="closecookie()">I Accept</button>
+
+        </div>
+    </div>
+    
+</body>
+</html>
