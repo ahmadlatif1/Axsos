@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yoga Center</title>
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"rel="stylesheet">    
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div  class="top-container"> 
+        <header>
+            <img src="content/logo.png" alt="">
+            <nav>
+                <ul> 
+                    <a href="">Home</a>
+                    <div class="nav-spacer"></div>
+                    <a href="">Products</a>
+                    <div class="nav-spacer"></div>
+                    <a href="">Company</a>
+                    <div class="nav-spacer"></div>
+                    <a href="">Blog</a>
+                </ul>
+                <div class="searchbar-container" >
+                    <img onclick="search('searchbar')" src="content/search.png" alt="search">
+                    <input id="searchbar" class="searchbar" type="text" placeholder="Search">
+                    <img  onclick="sound('play-audio')" src="content/sound icon.png" alt="sound">
+                    <audio id="play-audio" src="content/hello.mp3"></audio>
+                </div>
+            </nav>
+        </header>
+        <ul class="top-inner-container">
+            <li id="first-element"><p>Be peaceful in mind and healthy in Body!</p></li>
+            <li id="second-element"><p>Esto pacificus in mente et sanus in corpore!</p></li>
+            <li id="third-element"><button id="join-button" onmouseover="join(this,true)" onmouseout="join(this,false)">JOIN US NOW</button></li>
+        </ul>
+    </div>
+
+    <section class="center-container">
+        <h2>Our Yoga Classes</h2>
+        <p>Classes specially designed for every commitment level</p>
+        <div class="center-container-inner">
+            <div class="yoga-box">
+                <img src="content/basic-yoga.jpg" alt="class img">
+                <h3>Basic yoga</h3>
+                <p>Best for our casual beginners!</p>
+            </div>
+            <div class="yoga-box">
+                <img src="content/kundalini-yoga.jpg" alt="class img">
+                <h3>Kundalini yoga</h3>
+                <p>Yoga with Chakra alignment!</p>
+            </div>
+            <div class="yoga-box">
+                <img src="content/advanced-yoga-poses.jpg" alt="class img">
+                <h3>Advanced yoga</h3>
+                <p>harder poses with better results!</p>
+            </div>
+
+        </div>
+    </section>
+    <footer>
+        <span>© March 2025 All Rights Reserved. Created by <a href="https://github.com/ahmadlatif1">Ahmad Abdellatif</a> </span>
+        <div class="socials">
+            <img src="content/icons8-github-30.png" alt="" >
+            <img src="content/icons8-linkedin-50.png" alt="">
+            <img src="content/facebook.png" alt="">
+            <img src="content/icons8-google-plus-30.png" alt="">
+        </div>
+    </footer>
+</body>
+</html>
