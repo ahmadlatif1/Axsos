@@ -1,0 +1,40 @@
+body{
+    display: flex;
+    padding: 200px;
+}
+
+.board{
+    display: flex;
+    flex-flow: column;
+    border: 1px solid black;
+    
+    :nth-child(odd){
+
+        :nth-child(odd){
+            background-color: #ffffe0;
+        }
+        :nth-child(even){
+            background-color: #556b2f;
+        }
+
+    }
+    :nth-child(even){
+
+        :nth-child(even){
+            background-color: #ffffe0;
+        }
+        :nth-child(odd){
+            background-color: #556b2f;
+        }
+    }
+}
+.row{
+    display: flex;
+    flex-flow: row;
+}
+.square{
+    
+    width: 20px;
+    height: 20px;
+
+}
