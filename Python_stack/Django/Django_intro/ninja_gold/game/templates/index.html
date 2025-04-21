@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href={% static "style.css" %}>
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class='container'>
+        <div class="topbar">
+            <label for:"goldbox">Your Gold:<div name="goldbox" class="gold_box">{{player.gold}}</div></label>
+            
+            <label for:"level"> level :<div name="level" class="gold_box">{{player.level}}</div></label>
+            <label for:"exp"> Exp:<div name="exp" class="gold_box">{{player.exp}}</div></label>
+            
+            <label for:"area"> Area:<div name="goldbox" class="gold_box">{{player.area}}</div></label>
+        </div>
+        <div class="locations">
+            {% for location in locations %}
+            {% if location.difficulty|add:player.diff <= player.level %}
+                <form method="POST" class="location" style="border-color:green">
+            {% else %}
+                <form method="POST" class="location" style="border-color:red">
+            {% endif %}
+                    {% csrf_token %}
+                    <span>{{location.name}}</span>
+                    <span>difficulty: {{location.difficulty|add:player.diff}}</span>
+                    <span>EXP: {{location.exp}}</span>
+                    <span>(earns {{location.gold.min}}-{{location.gold.max}} Gold)</span>
+                    <button type="submit">Fight!</button>
+                    <input type="hidden" name="placename" value={{location.name}}>
+                </form>
+            {% endfor %}
+        </div>
+        <div class="activitylog">
+            {% for line in player.missionlog %}
+                {% if line.success %}
+                <span style="color:green;">
+                {% else %}
+                <span style="color:red;">
+                {% endif %}
+                    {{line.message}}
+                </span>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

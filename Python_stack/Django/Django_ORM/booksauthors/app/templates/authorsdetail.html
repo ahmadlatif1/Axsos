@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    {% comment %} this page should only be visited like authors/id, same template as books.html, and add a book in a select {% endcomment %}
+    <div class="author-details-container">
+        <div class="author-info">
+            <h1 class="author-name">{{ author.first_name }} {{ author.last_name }}</h1>
+            <p class="author-id">ID: {{ author.id }}</p>
+            <p class="author-notes">{{ author.notes }}</p>
+        </div>
+        <div class="books-section">
+            <h3 class="books-title">Books</h3>
+            <ul>
+            {% for book in author.books.all %}
+            <li>{{ book.title }}</li>
+            {% endfor %}
+            </ul>
+            <form action="/authors/{{author.id}}/add_book/" method="post">
+            {% csrf_token %}
+            <select name="book_id" class="books-select">
+            {% for book in all_books %}
+            <option value="{{ book.id }}">{{ book.title }}</option>
+            {% endfor %}
+            </select>
+            <button type="submit" class="add-book-button">Add Book</button>
+            </form>
+        </div>
+    </div>
+
+
+
+    
+</body>
+</html>

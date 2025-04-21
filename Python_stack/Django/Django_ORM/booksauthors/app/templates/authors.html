@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    {% comment %} should be same layout as index, but instead of books its authors {% endcomment %}
+
+    
+    <div class="container">
+
+        <form class="addAuthorForm" method="POST" action="/add_author/">
+            {% csrf_token %}
+            <h1>Add Author</h1>
+            <label for="first_name">First Name<input type="text" name="first_name" required></label>
+            <label for="last_name">Last Name<input type="text" name="last_name" required></label>
+            <label for="notes">Notes<textarea name="notes"></textarea></label>
+            <button type="submit">Add Author</button>
+        </form>
+        <div class="authorsTable">
+            <table class="table">
+            <thead>
+                <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for author in authors %}
+                <tr>
+
+                <td>{{ author.id }}</td>
+                <td>{{ author.first_name }} {{ author.last_name }}</td>
+
+                {% comment %} action under here returns authors/id {% endcomment %}
+                <td><a href="/authors/{{ author.id }}">View</a></td>  
+                </tr>
+                {% endfor %}
+            </tbody>
+            </table>
+        </div>
+
+</body>
+</html>

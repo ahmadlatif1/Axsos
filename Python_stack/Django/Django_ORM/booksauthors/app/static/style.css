@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Balsamiq Sans";
+}
+
+
+
+.container{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+
+.addBookForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.addBookForm input{
+    margin: 10px;
+    padding: 10px;
+    width: 80%;
+}
+.addBookForm button{
+    padding: 10px;
+    width: 50%;
+
+    color: white;
+    cursor: pointer;
+}
+
+/* stylize table into a box but look basic like excell with alternating grey and light grey rows, and no radiuses*/
+.bookTable{
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+.bookTable th, .bookTable td{
+    padding: 8px;
+    text-align: left;
+}
+
+.bookTable th{
+    background-color: #f2f2f2;
+}
+.bookTable tr:nth-child(even){
+    background-color: #f9f9f9;
+}
+
+
+.book-details-container {
+    margin: 20px;
+    padding: 15px;
+}
+
+.book-title {
+    color: #555;
+}
+
+.book-description {
+    color: #777;
+    line-height: 1.6;
+}
+
+.authors-section {
+    margin-top: 20px;
+}
+
+.authors-title {
+    color: #333;
+}
+
+.authors-select {
+    padding: 8px;
+}
+
+.add-author-button {
+    color: white;
+    padding: 8px 12px;
+
+    cursor: pointer;
+}
+
+
+
+.authorsTable{
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+.authorsTable th, .authorsTable td{
+    padding: 8px;
+    text-align: left;
+}
+
+.authorsTable th{
+    background-color: #f2f2f2;
+}
+.authorsTable tr:nth-child(even){
+    background-color: #f9f9f9;
+}
+
+
+.addAuthorForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.addAuthorForm input{
+    margin: 10px;
+    padding: 10px;
+    width: 80%;
+}
+.addAuthorForm button{
+    padding: 10px;
+    width: 50%;
+
+    color: white;
+    cursor: pointer;
+}
+
+
+.author-details-container {
+    margin: 20px;
+    padding: 15px;
+}
+
+.author-name {
+    color: #555;
+}
+
+.author-notes {
+    color: #777;
+    line-height: 1.6;
+}
+
+.books-section {
+    margin-top: 20px;
+}
+
+.books-title {
+    color: #333;
+}
+
+.books-select {
+    padding: 8px;
+}
+
+.add-book-button {
+    color: white;
+    padding: 8px 12px;
+    cursor: pointer;
+}

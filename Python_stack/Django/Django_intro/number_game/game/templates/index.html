@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <title>The Great Number Game</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">   
+</head>
+<body>
+
+    <div class="container">
+        <h1>Welcome to The Great Number Game!</h1>
+        <span> I am thinking of a number between 1 and 100</span>
+        <span>Take a guess!</span>
+
+        {% if submitted%}
+            <div class="resultbox" style="background-color:{{bg_color}};">
+
+                {% if input < goal %}
+                    <span class="lowtext">Too Low!</span>
+                {% elif input > goal %}
+                    <span class="hightext">Too High!</span>
+                {% elif input == goal %}
+                <form method="POST">
+                    {% csrf_token %}
+                        <input type="hidden" id="custId" name="custId" value="retry">
+                        <span>{{input}} was the number!</span>
+                        <button type=submit>play again</button>
+                </form>
+                {% endif %}
+            </div>
+        {% endif %}
+        
+        {% if  input != goal %}
+        <form method="POST" class="submitform">
+            {% csrf_token %}
+            <input type="hidden" id="custId" name="custId" value="input">
+            <input type="number" class="inputfield" name="input" placeholder="Enter number" />
+            <button type="submit">Submit</button>
+        </form>
+        {% endif %}
+        
+    </div>
+</body>
+</html>
