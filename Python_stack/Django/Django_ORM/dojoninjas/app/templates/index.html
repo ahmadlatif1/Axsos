@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="formcontainer">
+        <form action="/newdojo/" method="post">
+            {% csrf_token %}
+            <label for="dojo_name">Name:</label>
+            <input type="text" name="dojo_name">
+            <label for="city">City:</label>
+            <input type="text" name="dojo_city">
+            <label for="state">State:</label>
+            <input type="text" name="dojo_state">
+            <button type="submit">Add Dojo</button>
+        </form>
+        <form action="/newninja/" method="post">
+            {% csrf_token %}
+            <label for="first_name">First Name:</label>
+            <input type="text" name="first_name">
+            <label for="last_name">Last Name:</label>
+            <input type="text" name="last_name">
+            <label for="dojo_id">Dojo:</label>
+            <select name="dojo_id">
+            {% for dojo in dojos %}
+            <option value="{{ dojo.id }}">{{ dojo.name }}</option>
+            {% endfor %}
+            </select>
+            <button type="submit">Add Ninja</button>
+        </form>
+    </div>
+    <div class="dojolist">
+        <h2>all the dojos</h2>
+        <ul>
+            {% for dojo in dojos %}
+            <ul>
+                <h3>ninjas at the {{ dojo.name }} dojo</h3>
+                {% for ninja in dojo.ninjas.all %}
+                <li>{{ ninja.first_name }} {{ ninja.last_name }}</li>
+                {% endfor %}
+            </ul>
+            {% endfor %}
+        
+    </div>
+</body>
+</html>
