@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <a class="backbutton" href="/shows">Go Back</a>
+    <div class="formcontainer">
+        <h1>Edit Show {{show.id}}</h1> 
+        <form action="/shows/update/{{show.id}}/" method="POST">
+            {% csrf_token %}
+            <label for="title">Title:<input type="text" id="title" name="title" value="{{show.title}}"></label>
+            <label for="network">Network:<input type="text" id="network" name="network" value="{{show.network}}"></label>
+            <label for="release_date">Release Date:<input type="date" id="release_date" name="release_date" value="{{show.release_date|date:'Y-m-d'}}"></label>
+            <label for="description">Description:<textarea id="description" name="description">{{show.description}}</textarea></label>
+            <input type="submit" value="Update Show">
+        </form>
+
+    </div>
+</body>
+</html>
