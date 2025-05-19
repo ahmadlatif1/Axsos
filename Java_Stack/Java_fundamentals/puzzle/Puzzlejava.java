@@ -25,7 +25,7 @@ public class Puzzlejava     {
         int[] arr=new int[10];
         for (int i = 0; i < arr.length; i++) {
 
-            arr[i]=rand.nextInt(0,21);
+            arr[i]=rand.nextInt(1,21);
 
         }
         return arr;
