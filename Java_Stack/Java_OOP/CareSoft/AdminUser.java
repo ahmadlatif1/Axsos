@@ -1,4 +1,4 @@
-package Java_OOP.CareSoft.src.com.caresoft.clinicapp;
+package Java_OOP.CareSoft;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -14,11 +14,7 @@ public class AdminUser extends User implements HIPAACompliantUser, HIPAAComplian
         this.securityIncidents=new ArrayList<String>();
     }
 
-    // TO DO: Implement a constructor that takes an ID and a role
 
-
-    // TO DO: Implement HIPAACompliantUser!
-    // TO DO: Implement HIPAACompliantAdmin!
     
     public void newIncident(String notes) {
         String report = String.format(
