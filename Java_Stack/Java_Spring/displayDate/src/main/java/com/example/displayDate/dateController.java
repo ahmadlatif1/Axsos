@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class dateController {
-	@RequestMapping("/")
+	@RequestMapping("")
 	public String index() {
 		return "index.jsp";
 	}
