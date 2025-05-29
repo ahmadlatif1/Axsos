@@ -1,0 +1,62 @@
+*{
+	margin:0;
+	padding:0;
+	font-family:"Helvetica";
+}
+
+body{
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	
+	
+	
+}
+.formOuter{
+	display:flex;
+	flex-flow:column;
+	align-items:center;
+	
+	
+	form{
+		width:400px;
+		display:flex;
+		flex-flow:column;
+		
+		border:3px solid black;
+		border-radius:5px;
+		padding:20px;
+		gap:10px;
+		
+		label{
+			display:flex;
+			gap:2px;
+			padding:2px;
+			flex-flow:column;
+			input,textarea{
+				border:2px solid #ccc;
+				border-radius:3px;
+				padding:4px
+			}
+		}
+	}
+}
+
+.omikuji{
+	margin:10px;
+	border:2px solid black;
+	border-radius:5px;
+
+	display:flex;
+	flex-flow:column;
+	align-items:center;
+	width:400px;
+	background-color:rgb(200, 200, 240);
+	padding:20px;
+	span{
+	font-size:28px;
+	line-height:1.5;
+	}
+	
+
+}
