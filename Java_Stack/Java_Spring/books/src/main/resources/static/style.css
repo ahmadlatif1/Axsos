@@ -1,0 +1,44 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing:border-box;
+	table{
+	*{
+		border:none;
+	}
+	}
+	
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	
+}
+
+body{
+	padding:100px;
+	display:flex;
+	flex-flow:column;
+	align-items:center;
+	justify-content:center;
+	
+}
+
+
+table{
+	background-color:#22222244;
+	padding:20px;
+	margin:40px;
+	width:700px;
+	border-spacing:0px 4px;
+	tr{
+		background-color:white;
+		
+		th{
+			text-align:left;
+			font-weight:600;
+		}
+		th , td{
+			font-size:20px;
+			padding:10px 15px;
+		}
+		
+	}
+}
