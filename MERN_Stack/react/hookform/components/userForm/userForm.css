@@ -1,0 +1,24 @@
+.userForm {
+        
+    display: flex;
+    flex-flow:column;
+    gap:10px;
+    padding:20px;
+    border:1px solid #ccc;
+    border-radius: 10px;
+
+    input{
+        
+        border:1px solid #ccc;
+        border-radius: 5px;
+        padding:5px;
+    }
+    div div{
+        display: flex;
+        justify-content: space-between;
+        gap:10px;
+    }
+    .error{
+        color:red;
+    }
+}

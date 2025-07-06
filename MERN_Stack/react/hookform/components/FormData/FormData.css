@@ -1,0 +1,8 @@
+.formData {
+  display: flex;
+  flex-flow: column;
+   span{
+    display: flex;
+    gap:10px;
+  }
+}
